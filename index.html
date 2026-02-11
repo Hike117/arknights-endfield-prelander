@@ -10,57 +10,72 @@
         * { margin:0; padding:0; box-sizing:border-box; }
         body { background: var(--bg); color: var(--txt); font-family: 'Rajdhani', sans-serif; overflow-x: hidden; }
         h1,h2,h3 { font-family: 'Orbitron', sans-serif; text-transform: uppercase; letter-spacing: 2px; }
-        .hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.4), var(--bg)), url('https://images.alphacoders.com/133/1338575.jpg') center/cover; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; }
-        .logo { width: 320px; margin-bottom: 25px; filter: drop-shadow(0 0 15px rgba(240,165,0,0.4)); }
-        .btn { background: var(--p); color: #000; padding: 18px 45px; font-size: 1.3rem; font-weight: bold; border: none; border-radius: 4px; cursor: pointer; transition: 0.3s; text-decoration: none; font-family: 'Orbitron', sans-serif; margin-top: 35px; }
-        .btn:hover { transform: scale(1.05); box-shadow: 0 0 25px var(--p); }
-        .plats { margin-top: 45px; display: flex; gap: 30px; opacity: 0.8; font-weight: 600; letter-spacing: 1px; }
-        .sec { padding: 100px 12%; display: flex; align-items: center; gap: 60px; }
+        .hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.6), var(--bg)), url('https://images.igdb.com/igdb/image/upload/t_1080p/ar86o.jpg') center/cover; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; }
+        .logo { width: 350px; margin-bottom: 30px; filter: drop-shadow(0 0 20px rgba(240,165,0,0.6)) brightness(1.2); }
+        .btn { background: var(--p); color: #000; padding: 20px 50px; font-size: 1.4rem; font-weight: bold; border: none; border-radius: 4px; cursor: pointer; transition: 0.3s; text-decoration: none; font-family: 'Orbitron', sans-serif; margin-top: 40px; }
+        .btn:hover { transform: scale(1.05); box-shadow: 0 0 30px var(--p); }
+        .plats { margin-top: 50px; display: flex; gap: 35px; opacity: 0.9; font-weight: 700; letter-spacing: 2px; font-size: 1.1rem; color: var(--p); }
+        .sec { padding: 120px 15%; display: flex; align-items: center; gap: 80px; }
         .sec:nth-child(even) { flex-direction: row-reverse; }
         .sec-txt { flex: 1; }
-        .sec-img { flex: 1; height: 350px; border-radius: 12px; overflow: hidden; background: var(--acc); }
-        .sec-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s; }
-        .sec-img:hover img { transform: scale(1.08); }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; padding: 60px 12% 100px; }
-        .card { background: #151517; padding: 40px; border-left: 5px solid var(--p); transition: 0.3s; }
-        .card:hover { background: #1e1e21; transform: translateY(-5px); }
-        footer { padding: 60px; text-align: center; border-top: 1px solid #222; color: #777; font-size: 0.95rem; }
-        @media (max-width: 900px) { .sec { flex-direction: column !important; text-align: center; } .logo { width: 240px; } }
+        .sec-txt h2 { font-size: 2.5rem; margin-bottom: 25px; border-bottom: 3px solid var(--p); display: inline-block; padding-bottom: 10px; }
+        .sec-img { flex: 1.2; height: 400px; border-radius: 15px; overflow: hidden; border: 1px solid #333; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .sec-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.8s; }
+        .sec-img:hover img { transform: scale(1.1); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; padding: 80px 15% 120px; }
+        .card { background: #161618; padding: 45px; border-top: 4px solid var(--p); transition: 0.4s; position: relative; }
+        .card:hover { background: #1f1f22; transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.4); }
+        .card h3 { color: var(--p); margin-bottom: 20px; }
+        footer { padding: 80px; text-align: center; border-top: 1px solid #222; color: #888; font-size: 1rem; }
+        @media (max-width: 1100px) { .sec { flex-direction: column !important; text-align: center; padding: 80px 10%; } .logo { width: 280px; } }
     </style>
 </head>
 <body>
     <section class="hero">
-        <img src="https://raw.githubusercontent.com/Yue-plus/endfield_icons/main/svg/endfield-icon-en.svg" alt="Endfield Logo" class="logo">
-        <div style="border: 2px solid var(--p); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; margin-bottom: 15px; font-weight: bold; color: var(--p);">NOW AVAILABLE WORLDWIDE</div>
+        <img src="https://raw.githubusercontent.com/Yue-plus/endfield_icons/main/svg/endfield-icon-en.svg" alt="Arknights Endfield Logo" class="logo">
+        <div style="background: rgba(240,165,0,0.1); border: 2px solid var(--p); padding: 8px 25px; border-radius: 30px; font-size: 0.9rem; margin-bottom: 20px; font-weight: 800; color: var(--p); letter-spacing: 3px;">NOW AVAILABLE WORLDWIDE</div>
         <h1>Over the Frontier, Into the Front</h1>
-        <p style="font-size: 1.3rem; color: #ccc; margin-top: 15px;">Step into the wilderness of Talos-II as the Endministrator.</p>
+        <p style="font-size: 1.4rem; color: #ddd; margin-top: 20px; max-width: 800px; line-height: 1.6;">Venture into the wilderness of Talos-II as the Endministrator. Lead Endfield Industries to reclaim lost technology and survive the frontier.</p>
         <a href="https://endfield.gryphline.com/en-us/" class="btn">PRE-REGISTER NOW</a>
         <div class="plats">
-            <span>PS5®</span> | <span>WINDOWS</span> | <span>iOS</span> | <span>ANDROID</span>
+            <span>PS5®</span> <span>PC</span> <span>iOS</span> <span>ANDROID</span>
         </div>
     </section>
+
     <section class="sec">
         <div class="sec-txt">
             <h2>Explore Talos-II</h2>
-            <p style="margin-top: 20px; line-height: 1.8; color: #aaa;">Venture into the towering ranges and winding rivers of a world beyond the frontier. Reclaim lost technology and survive the harsh environment in this real-time 3D RPG.</p>
+            <p style="font-size: 1.15rem; line-height: 1.9; color: #bbb;">Venture into the towering ranges and winding rivers of a world beyond the frontier. Reclaim lost technology and neutralize the Blight in this groundbreaking real-time 3D RPG.</p>
         </div>
-        <div class="sec-img"><img src="https://images.alphacoders.com/133/1338573.jpg" alt="Talos-II"></div>
+        <div class="sec-img"><img src="https://images.igdb.com/igdb/image/upload/t_1080p/ar86m.jpg" alt="Talos-II Landscape"></div>
     </section>
+
     <section class="sec">
         <div class="sec-txt">
             <h2>AIC Factory System</h2>
-            <p style="margin-top: 20px; line-height: 1.8; color: #aaa;">Master the Automated Industry Complex. Build automated production lines, manage energy grids, and optimize resource gathering to power your journey across the planet.</p>
+            <p style="font-size: 1.15rem; line-height: 1.9; color: #bbb;">Master the Automated Industry Complex. Build automated production lines, manage energy grids, and optimize resource logistics that continue to run even while you are offline.</p>
         </div>
-        <div class="sec-img"><img src="https://images.alphacoders.com/133/1338574.jpg" alt="AIC Factory"></div>
+        <div class="sec-img"><img src="https://images.igdb.com/igdb/image/upload/t_1080p/ar86n.jpg" alt="AIC Base Building"></div>
     </section>
+
     <div class="grid">
-        <div class="card"><h3>Dynamic Combat</h3><p style="color:#888; margin-top:15px;">Lead a squad of four operators in fast-paced, real-time tactical encounters with stunning visual feedback.</p></div>
-        <div class="card"><h3>Base Building</h3><p style="color:#888; margin-top:15px;">The AIC system offers deep industrial automation and strategic base management that runs even while offline.</p></div>
-        <div class="card"><h3>Deep Narrative</h3><p style="color:#888; margin-top:15px;">Discover a new chapter in the Arknights universe, featuring a compelling story and a diverse cast of characters.</p></div>
+        <div class="card">
+            <h3>Strategic Combat</h3>
+            <p style="color:#999; line-height: 1.7;">Command a squad of specialized operators in high-speed, real-time tactical encounters featuring unique combo systems and elemental synergies.</p>
+        </div>
+        <div class="card">
+            <h3>Industrial Mastery</h3>
+            <p style="color:#999; line-height: 1.7;">The AIC system is the core of your progression. Design efficient layouts to produce essential resources and advanced gear for your team.</p>
+        </div>
+        <div class="card">
+            <h3>A New Universe</h3>
+            <p style="color:#999; line-height: 1.7;">Experience a completely new storyline in the Arknights world. Meet a diverse cast of Operators and uncover the deep secrets of Talos-II.</p>
+        </div>
     </div>
+
     <footer>
         <p>&copy; 2022-2026 GRYPHLINE. All Rights Reserved.</p>
-        <p style="margin-top: 15px;">Available on PlayStation&reg;5, PC, App Store, and Google Play.</p>
+        <p style="margin-top: 20px; font-size: 0.9rem;">Play Arknights: Endfield on PlayStation&reg;5, Windows, App Store, and Google Play.</p>
     </footer>
 </body>
 </html>
