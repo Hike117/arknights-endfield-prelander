@@ -1,486 +1,142 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arknights: Endfield - Le Nouveau RPG Stratégique en Temps Réel</title>
-    <meta name="description" content="Explorez Talos-II dans le nouveau RPG stratégique Arknights: Endfield. Combat en temps réel, construction industrielle et exploration 3D.">
+    <title>Arknights: Endfield - Over the Frontier, Into the Front</title>
+    <meta name="description" content="Venture into the towering ranges and winding rivers of Talos-II in the new real-time strategic RPG, Arknights: Endfield.">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --primary: #f4d03f;
+            --accent: #00d4ff;
+            --dark: #0a0e1a;
+            --light: #f8f9fa;
         }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, system-ui, sans-serif; line-height: 1.6; color: #fff; background: var(--dark); overflow-x: hidden; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #2c3e50;
-            background: #0a0e1a;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Hero Section */
+        /* Hero */
         .hero {
-            background: linear-gradient(135deg, #1a1f35 0%, #0a0e1a 100%);
-            color: #fff;
-            padding: 80px 20px 60px;
-            text-align: center;
             position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23f4d03f" opacity="0.1" x="0" y="300" width="400" height="200" transform="rotate(-15 200 400)"/><rect fill="%2300d4ff" opacity="0.1" x="800" y="100" width="300" height="300" transform="rotate(20 950 250)"/></svg>') no-repeat center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(10, 14, 26, 0.7), rgba(10, 14, 26, 0.9)), 
+                        url('https://images.igdb.com/igdb/image/upload/t_1080p/ar86m.jpg') no-repeat center center;
             background-size: cover;
-            opacity: 0.3;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .hero h1 {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 800;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
-            line-height: 1.2;
-        }
-        
-        .hero-accent {
-            color: #f4d03f;
-        }
-        
-        .hero h2 {
-            font-size: clamp(1.1rem, 3vw, 1.5rem);
-            font-weight: 400;
-            margin-bottom: 40px;
-            color: #e0e0e0;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .cta-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 40px;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 16px 40px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .btn-primary {
-            background: linear-gradient(135deg, #f4d03f 0%, #e6c030 100%);
-            color: #1a1f35;
-            box-shadow: 0 4px 15px rgba(244, 208, 63, 0.4);
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(244, 208, 63, 0.6);
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: #fff;
-            border: 2px solid #00d4ff;
-            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2);
-        }
-        
-        .btn-secondary:hover {
-            background: rgba(0, 212, 255, 0.1);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 212, 255, 0.4);
-        }
-        
-        /* Release Badge */
-        .release-badge {
-            display: inline-block;
-            background: rgba(244, 208, 63, 0.2);
-            border: 2px solid #f4d03f;
-            color: #f4d03f;
-            padding: 8px 20px;
-            border-radius: 30px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        /* Why Section */
-        .why-section {
-            background: #fff;
-            padding: 80px 20px;
-        }
-        
-        .section-title {
             text-align: center;
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 60px;
-            font-weight: 800;
-            color: #1a1f35;
+            padding: 100px 0;
         }
+        .hero-content { z-index: 2; width: 100%; }
+        .badge { display: inline-block; padding: 8px 24px; border: 2px solid var(--primary); color: var(--primary); border-radius: 50px; font-weight: 800; letter-spacing: 2px; margin-bottom: 24px; text-transform: uppercase; font-size: 0.8rem; }
+        h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); line-height: 1.1; margin-bottom: 20px; font-weight: 900; }
+        .highlight { color: var(--primary); }
+        .hero p { font-size: 1.25rem; max-width: 700px; margin: 0 auto 40px; color: #ccc; }
         
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 40px;
-        }
-        
-        .feature-card {
-            padding: 30px;
-            background: #f8f9fa;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-            border-color: #f4d03f;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            display: block;
-        }
-        
-        .feature-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #1a1f35;
-            font-weight: 700;
-        }
-        
-        .feature-card p {
-            color: #555;
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-        
-        /* Lore Section */
-        .lore-section {
-            background: linear-gradient(135deg, #1a1f35 0%, #0f1420 100%);
-            color: #fff;
-            padding: 80px 20px;
-        }
-        
-        .lore-content {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .lore-title {
-            font-size: clamp(1.8rem, 4vw, 2.5rem);
-            margin-bottom: 30px;
-            color: #f4d03f;
-            font-weight: 800;
-        }
-        
-        .lore-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #e0e0e0;
-            margin-bottom: 20px;
-        }
-        
-        .lore-highlight {
-            background: rgba(244, 208, 63, 0.1);
-            border-left: 4px solid #f4d03f;
-            padding: 20px;
-            margin: 30px 0;
-            font-style: italic;
-        }
-        
-        /* Gameplay Section */
-        .gameplay-section {
-            background: #fff;
-            padding: 80px 20px;
-        }
-        
-        .gameplay-pillars {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-        
-        .pillar {
-            text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-radius: 12px;
-            transition: all 0.3s ease;
-        }
-        
-        .pillar:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
-        }
-        
-        .pillar-number {
-            display: inline-block;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #f4d03f 0%, #e6c030 100%);
-            color: #1a1f35;
-            border-radius: 50%;
-            font-size: 1.8rem;
-            font-weight: 800;
-            line-height: 60px;
-            margin-bottom: 20px;
-        }
-        
-        .pillar h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #1a1f35;
-            font-weight: 700;
-        }
-        
-        .pillar p {
-            color: #555;
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-        
-        /* Platform Section */
-        .platform-section {
-            background: #f8f9fa;
-            padding: 60px 20px;
-        }
-        
-        .platforms {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 40px;
-        }
-        
-        .platform-badge {
-            padding: 12px 30px;
-            background: #fff;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            font-weight: 700;
-            color: #1a1f35;
-            font-size: 1rem;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-        }
-        
-        .platform-badge:hover {
-            border-color: #f4d03f;
-            background: #fffbf0;
-            transform: translateY(-3px);
-        }
-        
-        /* Final CTA */
-        .final-cta {
-            background: linear-gradient(135deg, #1a1f35 0%, #0a0e1a 100%);
-            color: #fff;
-            padding: 80px 20px;
-            text-align: center;
-        }
-        
-        .final-cta h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 30px;
-            font-weight: 800;
-        }
-        
-        .final-cta p {
-            font-size: 1.2rem;
-            margin-bottom: 40px;
-            color: #e0e0e0;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
+        /* Buttons */
+        .cta-group { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+        .btn { padding: 18px 45px; border-radius: 8px; font-weight: 800; text-decoration: none; text-transform: uppercase; transition: 0.3s; font-size: 1rem; }
+        .btn-main { background: var(--primary); color: #000; box-shadow: 0 0 20px rgba(244, 208, 63, 0.3); }
+        .btn-main:hover { transform: translateY(-3px); box-shadow: 0 0 30px rgba(244, 208, 63, 0.5); }
+        .btn-outline { border: 2px solid #fff; color: #fff; }
+        .btn-outline:hover { background: #fff; color: #000; }
+
+        /* Platforms */
+        .platforms { padding: 40px 0; background: rgba(255,255,255,0.05); }
+        .platform-list { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; opacity: 0.8; }
+        .platform-item { font-weight: 700; font-size: 0.9rem; color: #aaa; text-transform: uppercase; }
+
+        /* Narrative */
+        .narrative { padding: 100px 0; background: #fff; color: #111; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; align-items: center; }
+        .narrative-img img { width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
+        .narrative-text h2 { font-size: 2.5rem; margin-bottom: 24px; line-height: 1.2; font-weight: 800; }
+        .narrative-text p { margin-bottom: 20px; font-size: 1.1rem; color: #444; }
+
+        /* Features */
+        .features { padding: 100px 0; background: var(--dark); }
+        .feat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .feat-card { padding: 40px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; transition: 0.3s; }
+        .feat-card:hover { border-color: var(--primary); background: rgba(244, 208, 63, 0.05); }
+        .feat-card i { font-size: 2.5rem; margin-bottom: 20px; display: block; }
+        .feat-card h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--primary); }
+        .feat-card p { color: #aaa; }
+
         /* Footer */
-        .footer {
-            background: #0a0e1a;
-            color: #888;
-            padding: 30px 20px;
-            text-align: center;
-            font-size: 0.9rem;
-        }
+        footer { padding: 60px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); color: #666; font-size: 0.9rem; }
         
-        .footer a {
-            color: #f4d03f;
-            text-decoration: none;
-        }
-        
-        .footer a:hover {
-            text-decoration: underline;
-        }
-        
-        /* Responsive */
         @media (max-width: 768px) {
-            .hero {
-                padding: 60px 20px 40px;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .btn {
-                width: 100%;
-                max-width: 300px;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .features-grid,
-            .gameplay-pillars {
-                grid-template-columns: 1fr;
-            }
+            h1 { font-size: 2.5rem; }
+            .btn { width: 100%; }
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
+
     <section class="hero">
-        <div class="hero-content container">
-            <div class="release-badge">🎮 Lancement Mondial - 22 Janvier 2026</div>
-            <h1>Le Nouveau <span class="hero-accent">RPG Stratégique</span><br>en Temps Réel</h1>
-            <h2>Explorez Talos-II, dirigez les Industries Endfield et affrontez une menace planétaire dans l'univers d'Arknights</h2>
+        <div class="container hero-content">
+            <div class="badge">Global Release 01.22.2026</div>
+            <h1>OVER THE <span class="highlight">FRONTIER</span><br>INTO THE FRONT</h1>
+            <p>Lead Endfield Industries in expanding across Talos-II. A mysterious master over Originium, you are the key to humanity's survival.</p>
             
-            <div class="cta-buttons">
-                <a href="https://endfield.gryphline.com/fr-fr" class="btn btn-primary">Jouer Maintenant</a>
-                <a href="https://endfield.gryphline.com/fr-fr" class="btn btn-secondary">Préinscription Mobile</a>
+            <div class="cta-group">
+                <a href="https://endfield.gryphline.com/en-us" class="btn btn-main">Pre-Register Now</a>
+                <a href="https://endfield.gryphline.com/en-us" class="btn btn-outline">Watch Trailer</a>
             </div>
         </div>
     </section>
 
-    <!-- Why Section -->
-    <section class="why-section">
+    <div class="platforms">
+        <div class="container platform-list">
+            <div class="platform-item">PC Windows</div>
+            <div class="platform-item">PlayStation 5</div>
+            <div class="platform-item">Epic Games</div>
+            <div class="platform-item">App Store</div>
+            <div class="platform-item">Google Play</div>
+        </div>
+    </div>
+
+    <section class="narrative">
+        <div class="container grid">
+            <div class="narrative-text">
+                <h2>Become the Endministrator</h2>
+                <p>In the recorded history of Talos-II, the Endministrator stands as a key guardian who protected civilization and saved humanity from multiple catastrophic disasters.</p>
+                <p>Lead your team through the towering ranges and winding rivers of a planet in peril. Your mastery over the Protocol Network is Endfield's most important secret.</p>
+                <a href="https://endfield.gryphline.com/en-us" style="color: #000; font-weight: 800; text-decoration: none; border-bottom: 2px solid #000;">LEARN MORE ABOUT LORE →</a>
+            </div>
+            <div class="narrative-img">
+                <img src="https://images.igdb.com/igdb/image/upload/t_1080p/ar86n.jpg" alt="Endfield Character">
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
         <div class="container">
-            <h2 class="section-title">Pourquoi Arknights: Endfield ?</h2>
-            
-            <div class="features-grid">
-                <div class="feature-card">
-                    <span class="feature-icon">🌍</span>
-                    <h3>Exploration 3D Immersive</h3>
-                    <p>Parcourez Talos-II en temps réel avec ses hauteurs vertigineuses, rivières sinueuses et zones dangereuses. Chaque région recèle des secrets et des anomalies à découvrir.</p>
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 60px; font-weight: 800;">COMMAND THE FUTURE</h2>
+            <div class="feat-grid">
+                <div class="feat-card">
+                    <h3>Explore Talos-II</h3>
+                    <p>Venture into dangerous regions, eliminate the Blight, and neutralize Ankhor threats across a massive 3D world.</p>
                 </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">⚔️</span>
-                    <h3>Combats Stratégiques en Temps Réel</h3>
-                    <p>Maîtrisez le positionnement tactique et les compétences de vos opérateurs. Éliminez la Gangrène et neutralisez les Ankhors dans des affrontements où chaque décision compte.</p>
+                <div class="feat-card">
+                    <h3>Automated Production</h3>
+                    <p>Master the AIC (Automated Industry Complex) to produce tactical gear, explosives, and materials for your operators.</p>
                 </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">⚙️</span>
-                    <h3>Construction & Industrie Automatisée</h3>
-                    <p>Exploitez le puissant Groupe industriel automatisé (GIA) pour produire armes, explosifs, batteries et équipements tactiques. Industrialisez toute la planète pour faire prospérer vos bases.</p>
+                <div class="feat-card">
+                    <h3>Real-Time Strategy</h3>
+                    <p>Lead a squad of specialized operators in high-stakes combat where positioning and timing are everything.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Lore Section Teaser -->
-    <section class="lore-section">
-        <div class="container lore-content">
-            <h2 class="lore-title">Incarnez une Légende</h2>
-            <p class="lore-text">Dans les manuels d'histoire de Talos-II, l'Endministrator est décrit comme l'entité protectrice de la civilisation, celle qui a sauvé l'humanité de catastrophes sans nom.</p>
-            <div class="lore-highlight">
-                "Son identité reste un mystère, et seuls quelques élus ont rencontré cette légende."
-            </div>
-            <p class="lore-text">Découvrez les secrets des Industries Endfield et le lien mystérieux entre l'Endministrator et le Protocole d'Originium.</p>
-        </div>
-    </section>
-
-    <!-- Gameplay Pillars -->
-    <section class="gameplay-section">
+    <footer>
         <div class="container">
-            <h2 class="section-title">Prenez les Commandes</h2>
-            
-            <div class="gameplay-pillars">
-                <div class="pillar">
-                    <div class="pillar-number">1</div>
-                    <h3>Explorez</h3>
-                    <p>Zones variées, verticalité extrême et dangers environnementaux sur Talos-II.</p>
-                </div>
-                <div class="pillar">
-                    <div class="pillar-number">2</div>
-                    <h3>Défendez</h3>
-                    <p>Dirigez des opérateurs d'élite pour neutraliser les menaces planétaires.</p>
-                </div>
-                <div class="pillar">
-                    <div class="pillar-number">3</div>
-                    <h3>Bâtissez</h3>
-                    <p>Optimisez vos chaînes de production via l'usine du GIA.</p>
-                </div>
-            </div>
+            <p>&copy; 2022-2026 GRYPHLINE. All Rights Reserved.</p>
+            <p style="margin-top: 10px;">Available on PC, PS5&reg;, Android and iOS.</p>
         </div>
-    </section>
-
-    <!-- Platforms -->
-    <section class="platform-section">
-        <div class="container text-center">
-            <h2 class="section-title">Disponible sur vos Plateformes</h2>
-            <div class="platforms">
-                <span class="platform-badge">PC / Epic</span>
-                <span class="platform-badge">Android</span>
-                <span class="platform-badge">iOS</span>
-                <span class="platform-badge">PlayStation 5</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="final-cta">
-        <div class="container">
-            <h2>Prêt à franchir les confins ?</h2>
-            <p>Rejoignez des milliers de joueurs et commencez votre aventure sur Talos-II dès aujourd'hui.</p>
-            <div class="cta-buttons">
-                <a href="https://endfield.gryphline.com/fr-fr" class="btn btn-primary">Lancer le Jeu</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2026 GRYPHLINE. Tous droits réservés. | <a href="https://endfield.gryphline.com/fr-fr">Site Officiel</a></p>
     </footer>
+
 </body>
 </html>
