@@ -3,140 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arknights: Endfield - Over the Frontier, Into the Front</title>
-    <meta name="description" content="Venture into the towering ranges and winding rivers of Talos-II in the new real-time strategic RPG, Arknights: Endfield.">
+    <title>Arknights: Endfield | Official Pre-Registration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #f4d03f;
-            --accent: #00d4ff;
-            --dark: #0a0e1a;
-            --light: #f8f9fa;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', -apple-system, system-ui, sans-serif; line-height: 1.6; color: #fff; background: var(--dark); overflow-x: hidden; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        
-        /* Hero */
-        .hero {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(rgba(10, 14, 26, 0.7), rgba(10, 14, 26, 0.9)), 
-                        url('https://images.igdb.com/igdb/image/upload/t_1080p/ar86m.jpg') no-repeat center center;
-            background-size: cover;
-            text-align: center;
-            padding: 100px 0;
-        }
-        .hero-content { z-index: 2; width: 100%; }
-        .badge { display: inline-block; padding: 8px 24px; border: 2px solid var(--primary); color: var(--primary); border-radius: 50px; font-weight: 800; letter-spacing: 2px; margin-bottom: 24px; text-transform: uppercase; font-size: 0.8rem; }
-        h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); line-height: 1.1; margin-bottom: 20px; font-weight: 900; }
-        .highlight { color: var(--primary); }
-        .hero p { font-size: 1.25rem; max-width: 700px; margin: 0 auto 40px; color: #ccc; }
-        
-        /* Buttons */
-        .cta-group { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-        .btn { padding: 18px 45px; border-radius: 8px; font-weight: 800; text-decoration: none; text-transform: uppercase; transition: 0.3s; font-size: 1rem; }
-        .btn-main { background: var(--primary); color: #000; box-shadow: 0 0 20px rgba(244, 208, 63, 0.3); }
-        .btn-main:hover { transform: translateY(-3px); box-shadow: 0 0 30px rgba(244, 208, 63, 0.5); }
-        .btn-outline { border: 2px solid #fff; color: #fff; }
-        .btn-outline:hover { background: #fff; color: #000; }
-
-        /* Platforms */
-        .platforms { padding: 40px 0; background: rgba(255,255,255,0.05); }
-        .platform-list { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; opacity: 0.8; }
-        .platform-item { font-weight: 700; font-size: 0.9rem; color: #aaa; text-transform: uppercase; }
-
-        /* Narrative */
-        .narrative { padding: 100px 0; background: #fff; color: #111; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; align-items: center; }
-        .narrative-img img { width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
-        .narrative-text h2 { font-size: 2.5rem; margin-bottom: 24px; line-height: 1.2; font-weight: 800; }
-        .narrative-text p { margin-bottom: 20px; font-size: 1.1rem; color: #444; }
-
-        /* Features */
-        .features { padding: 100px 0; background: var(--dark); }
-        .feat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .feat-card { padding: 40px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; transition: 0.3s; }
-        .feat-card:hover { border-color: var(--primary); background: rgba(244, 208, 63, 0.05); }
-        .feat-card i { font-size: 2.5rem; margin-bottom: 20px; display: block; }
-        .feat-card h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--primary); }
-        .feat-card p { color: #aaa; }
-
-        /* Footer */
-        footer { padding: 60px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); color: #666; font-size: 0.9rem; }
-        
-        @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            .btn { width: 100%; }
-        }
+        :root { --p: #f0a500; --bg: #0b0b0d; --txt: #fff; --acc: #1a1a1c; }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { background: var(--bg); color: var(--txt); font-family: 'Rajdhani', sans-serif; overflow-x: hidden; }
+        h1,h2,h3 { font-family: 'Orbitron', sans-serif; text-transform: uppercase; letter-spacing: 2px; }
+        .hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.4), var(--bg)), url('https://images.alphacoders.com/133/1338575.jpg') center/cover; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; }
+        .logo { width: 320px; margin-bottom: 25px; filter: drop-shadow(0 0 15px rgba(240,165,0,0.4)); }
+        .btn { background: var(--p); color: #000; padding: 18px 45px; font-size: 1.3rem; font-weight: bold; border: none; border-radius: 4px; cursor: pointer; transition: 0.3s; text-decoration: none; font-family: 'Orbitron', sans-serif; margin-top: 35px; }
+        .btn:hover { transform: scale(1.05); box-shadow: 0 0 25px var(--p); }
+        .plats { margin-top: 45px; display: flex; gap: 30px; opacity: 0.8; font-weight: 600; letter-spacing: 1px; }
+        .sec { padding: 100px 12%; display: flex; align-items: center; gap: 60px; }
+        .sec:nth-child(even) { flex-direction: row-reverse; }
+        .sec-txt { flex: 1; }
+        .sec-img { flex: 1; height: 350px; border-radius: 12px; overflow: hidden; background: var(--acc); }
+        .sec-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s; }
+        .sec-img:hover img { transform: scale(1.08); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; padding: 60px 12% 100px; }
+        .card { background: #151517; padding: 40px; border-left: 5px solid var(--p); transition: 0.3s; }
+        .card:hover { background: #1e1e21; transform: translateY(-5px); }
+        footer { padding: 60px; text-align: center; border-top: 1px solid #222; color: #777; font-size: 0.95rem; }
+        @media (max-width: 900px) { .sec { flex-direction: column !important; text-align: center; } .logo { width: 240px; } }
     </style>
 </head>
 <body>
-
     <section class="hero">
-        <div class="container hero-content">
-            <div class="badge">Global Release 01.22.2026</div>
-            <h1>OVER THE <span class="highlight">FRONTIER</span><br>INTO THE FRONT</h1>
-            <p>Lead Endfield Industries in expanding across Talos-II. A mysterious master over Originium, you are the key to humanity's survival.</p>
-            
-            <div class="cta-group">
-                <a href="https://endfield.gryphline.com/en-us" class="btn btn-main">Pre-Register Now</a>
-                <a href="https://endfield.gryphline.com/en-us" class="btn btn-outline">Watch Trailer</a>
-            </div>
+        <img src="https://raw.githubusercontent.com/Yue-plus/endfield_icons/main/svg/endfield-icon-en.svg" alt="Endfield Logo" class="logo">
+        <div style="border: 2px solid var(--p); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; margin-bottom: 15px; font-weight: bold; color: var(--p);">NOW AVAILABLE WORLDWIDE</div>
+        <h1>Over the Frontier, Into the Front</h1>
+        <p style="font-size: 1.3rem; color: #ccc; margin-top: 15px;">Step into the wilderness of Talos-II as the Endministrator.</p>
+        <a href="https://endfield.gryphline.com/en-us/" class="btn">PRE-REGISTER NOW</a>
+        <div class="plats">
+            <span>PS5®</span> | <span>WINDOWS</span> | <span>iOS</span> | <span>ANDROID</span>
         </div>
     </section>
-
-    <div class="platforms">
-        <div class="container platform-list">
-            <div class="platform-item">PC Windows</div>
-            <div class="platform-item">PlayStation 5</div>
-            <div class="platform-item">Epic Games</div>
-            <div class="platform-item">App Store</div>
-            <div class="platform-item">Google Play</div>
+    <section class="sec">
+        <div class="sec-txt">
+            <h2>Explore Talos-II</h2>
+            <p style="margin-top: 20px; line-height: 1.8; color: #aaa;">Venture into the towering ranges and winding rivers of a world beyond the frontier. Reclaim lost technology and survive the harsh environment in this real-time 3D RPG.</p>
         </div>
+        <div class="sec-img"><img src="https://images.alphacoders.com/133/1338573.jpg" alt="Talos-II"></div>
+    </section>
+    <section class="sec">
+        <div class="sec-txt">
+            <h2>AIC Factory System</h2>
+            <p style="margin-top: 20px; line-height: 1.8; color: #aaa;">Master the Automated Industry Complex. Build automated production lines, manage energy grids, and optimize resource gathering to power your journey across the planet.</p>
+        </div>
+        <div class="sec-img"><img src="https://images.alphacoders.com/133/1338574.jpg" alt="AIC Factory"></div>
+    </section>
+    <div class="grid">
+        <div class="card"><h3>Dynamic Combat</h3><p style="color:#888; margin-top:15px;">Lead a squad of four operators in fast-paced, real-time tactical encounters with stunning visual feedback.</p></div>
+        <div class="card"><h3>Base Building</h3><p style="color:#888; margin-top:15px;">The AIC system offers deep industrial automation and strategic base management that runs even while offline.</p></div>
+        <div class="card"><h3>Deep Narrative</h3><p style="color:#888; margin-top:15px;">Discover a new chapter in the Arknights universe, featuring a compelling story and a diverse cast of characters.</p></div>
     </div>
-
-    <section class="narrative">
-        <div class="container grid">
-            <div class="narrative-text">
-                <h2>Become the Endministrator</h2>
-                <p>In the recorded history of Talos-II, the Endministrator stands as a key guardian who protected civilization and saved humanity from multiple catastrophic disasters.</p>
-                <p>Lead your team through the towering ranges and winding rivers of a planet in peril. Your mastery over the Protocol Network is Endfield's most important secret.</p>
-                <a href="https://endfield.gryphline.com/en-us" style="color: #000; font-weight: 800; text-decoration: none; border-bottom: 2px solid #000;">LEARN MORE ABOUT LORE →</a>
-            </div>
-            <div class="narrative-img">
-                <img src="https://images.igdb.com/igdb/image/upload/t_1080p/ar86n.jpg" alt="Endfield Character">
-            </div>
-        </div>
-    </section>
-
-    <section class="features">
-        <div class="container">
-            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 60px; font-weight: 800;">COMMAND THE FUTURE</h2>
-            <div class="feat-grid">
-                <div class="feat-card">
-                    <h3>Explore Talos-II</h3>
-                    <p>Venture into dangerous regions, eliminate the Blight, and neutralize Ankhor threats across a massive 3D world.</p>
-                </div>
-                <div class="feat-card">
-                    <h3>Automated Production</h3>
-                    <p>Master the AIC (Automated Industry Complex) to produce tactical gear, explosives, and materials for your operators.</p>
-                </div>
-                <div class="feat-card">
-                    <h3>Real-Time Strategy</h3>
-                    <p>Lead a squad of specialized operators in high-stakes combat where positioning and timing are everything.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <footer>
-        <div class="container">
-            <p>&copy; 2022-2026 GRYPHLINE. All Rights Reserved.</p>
-            <p style="margin-top: 10px;">Available on PC, PS5&reg;, Android and iOS.</p>
-        </div>
+        <p>&copy; 2022-2026 GRYPHLINE. All Rights Reserved.</p>
+        <p style="margin-top: 15px;">Available on PlayStation&reg;5, PC, App Store, and Google Play.</p>
     </footer>
-
 </body>
 </html>
